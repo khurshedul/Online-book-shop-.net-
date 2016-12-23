@@ -1,0 +1,10 @@
+F:\project jsp\bkStore\DataSource\bin\Debug\DataSource.dll.config
+F:\project jsp\bkStore\DataSource\bin\Debug\DataSource.dll
+F:\project jsp\bkStore\DataSource\bin\Debug\DataSource.pdb
+F:\project jsp\bkStore\DataSource\bin\Debug\EntityFramework.dll
+F:\project jsp\bkStore\DataSource\bin\Debug\EntityFramework.SqlServer.dll
+F:\project jsp\bkStore\DataSource\bin\Debug\EntityFramework.xml
+F:\project jsp\bkStore\DataSource\bin\Debug\EntityFramework.SqlServer.xml
+F:\project jsp\bkStore\DataSource\obj\Debug\DataSource.csprojResolveAssemblyReference.cache
+F:\project jsp\bkStore\DataSource\obj\Debug\DataSource.dll
+F:\project jsp\bkStore\DataSource\obj\Debug\DataSource.pdb

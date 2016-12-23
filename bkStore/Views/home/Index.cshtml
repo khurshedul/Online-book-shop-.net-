@@ -1,0 +1,54 @@
+﻿@model IEnumerable<DataSource.Book>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<fieldset>
+    <legend>Book</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.bookName)
+    </div>
+
+    
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.publishYear)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.price)
+    </div>
+  
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.quantity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.authorId)
+    </div>
+    <table border="1">
+
+    @foreach (var item in Model) {
+            <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bookId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bookName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.publishYear)
+        </td>
+                 <td>
+            @Html.DisplayFor(modelItem => item.Author.authorName)
+        </td>
+    </tr>
+    }
+    </table>
+</fieldset>
+
