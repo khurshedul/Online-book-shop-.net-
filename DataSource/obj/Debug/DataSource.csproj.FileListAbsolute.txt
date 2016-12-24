@@ -1,10 +1,18 @@
 F:\project jsp\bkStore\DataSource\bin\Debug\DataSource.dll.config
-F:\project jsp\bkStore\DataSource\bin\Debug\DataSource.dll
 F:\project jsp\bkStore\DataSource\bin\Debug\DataSource.pdb
 F:\project jsp\bkStore\DataSource\bin\Debug\EntityFramework.dll
 F:\project jsp\bkStore\DataSource\bin\Debug\EntityFramework.SqlServer.dll
 F:\project jsp\bkStore\DataSource\bin\Debug\EntityFramework.xml
 F:\project jsp\bkStore\DataSource\bin\Debug\EntityFramework.SqlServer.xml
-F:\project jsp\bkStore\DataSource\obj\Debug\DataSource.csprojResolveAssemblyReference.cache
 F:\project jsp\bkStore\DataSource\obj\Debug\DataSource.dll
 F:\project jsp\bkStore\DataSource\obj\Debug\DataSource.pdb
+F:\project jsp\bkStore\DataSource\obj\Debug\DataSource.csprojResolveAssemblyReference.cache
+D:\ATP2\bkStore\DataSource\bin\Debug\DataSource.dll.config
+D:\ATP2\bkStore\DataSource\bin\Debug\DataSource.pdb
+D:\ATP2\bkStore\DataSource\bin\Debug\EntityFramework.dll
+D:\ATP2\bkStore\DataSource\bin\Debug\EntityFramework.SqlServer.dll
+D:\ATP2\bkStore\DataSource\bin\Debug\EntityFramework.xml
+D:\ATP2\bkStore\DataSource\bin\Debug\EntityFramework.SqlServer.xml
+D:\ATP2\bkStore\DataSource\obj\Debug\DataSource.csprojResolveAssemblyReference.cache
+D:\ATP2\bkStore\DataSource\obj\Debug\DataSource.dll
+D:\ATP2\bkStore\DataSource\obj\Debug\DataSource.pdb

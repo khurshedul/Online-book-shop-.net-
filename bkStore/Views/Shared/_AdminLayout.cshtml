@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Panel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="~/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/mycss.css" rel="stylesheet" />
+        <script src="~/javascript/jquery.min.js"></script>
+        <script src="~/javascript/bootstrap.min.js"></script>
+        <script src="~/javascript/jq.js"></script>
+
+
+            <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+            <link href="~/css/style.css" rel="stylesheet" />
+ 
+        @RenderSection("head", required: false)
+    </head>
+    <body>
+        @RenderBody()
+
+  
+            <nav class="navbar navbar-fixed-top navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Logo</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Add Book</a></li>
+                            <li><a href="#">Books List</a></li>
+                            <li><a href="#">Book Category</a></li>
+                            <li><a href="#">FeedBack</a></li>
+                             <li><a href="#">Sells Report</a></li>
+                             <li style="padding-top:1.5%">
+                                <form class="form-search" method="get" id="s" action="/">
+                                    <div class="input-append">
+                                        <input type="text" class="input-medium search-query" name="s" placeholder="Search" value="">
+                                        <button type="submit" class="add-on"><i class="icon-search"></i></button>
+                                    </div>
+                                </form>
+                            </li>
+
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+           <footer class="container-fluid navbar-fixed-bottom">
+                <p>Footer Text</p>
+            </footer>
+    </body>
+</html>

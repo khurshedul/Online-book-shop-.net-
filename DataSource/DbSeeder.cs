@@ -15,11 +15,13 @@ namespace DataSource
             base.Seed(context);
           Author author= new Author()
             {
+                authorId="2",
                 authorName="safayet",
               
                Books = new List<Book>()
                 {
                     new Book(){
+                        bookId="2",
                         bookName="Harano Valobasha",
                         publishYear="2016",
                         quantity=1,
@@ -34,11 +36,13 @@ namespace DataSource
 
           Author author2 = new Author()
           {
+              authorId="1",
               authorName = "sayem",
 
               Books = new List<Book>()
                 {
                     new Book(){
+                        bookId="3",
                         bookName="hkkhhk Valobasha",
                         publishYear="2016",
                         quantity=1,
@@ -52,18 +56,9 @@ namespace DataSource
           
           context.Authors.Add(author);
           context.Authors.Add(author2);
-          try
-          {
-              // Your code...
-              // Could also be before try if you know the exception occurs in SaveChanges
 
               context.SaveChanges();
-          }
-          catch (DbEntityValidationException e)
-          {
 
-          }
-            
         }
     }
 }

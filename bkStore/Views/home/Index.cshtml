@@ -2,53 +2,60 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_Layout.cshtml";
+    
+    
+    
 }
 
-<h2>Index</h2>
+<!DOCTYPE html>
 
 <fieldset>
-    <legend>Book</legend>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.bookName)
-    </div>
+    <legend></legend>
+    <div class="container" style="padding-top:5%">
+        <div id="gototop"> </div>
 
-    
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.publishYear)
-    </div>
+          
+        <h3>Click to buy this products </h3>
+        <ul class="thumbnails">
+            @foreach (var item in Model)
+            {
+            <li class="span3">
+                <div class="thumbnail">
+                    <a href="product_details.html" class="overlay"></a>
+                    <a href="product_details.html">@Html.Raw("<img src=/"+"images"+"/"+item.bookId+".jpg>")</a>
+                    <div class="caption cntr">
+                        <p><b>Book:</b>@Html.DisplayFor(modelItem => item.bookName)</p>
+                        <p><b>Price:</b>@Html.DisplayFor(modelItem => item.price)</p>
+                        <p> <b>Author:</b>
+                                       @{
+         using (DataSource.BookDbContext context = new DataSource.BookDbContext())
+            {
+                ViewBag.dta= (from a in context.Authors
+                            where a.authorId == item.authorId
+                            select a.authorName).SingleOrDefault();
+                         }
+              
+                         }
+            @ViewBag.dta
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.price)
-    </div>
-  
+                           </p>
+                        <h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
+                     
+                        <br class="clr">
+                    </div>
+                </div>
+            </li>
+            }
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.quantity)
-    </div>
+        </ul>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.authorId)
-    </div>
-    <table border="1">
 
-    @foreach (var item in Model) {
-            <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.bookId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.bookName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.publishYear)
-        </td>
-                 <td>
-            @Html.DisplayFor(modelItem => item.Author.authorName)
-        </td>
-    </tr>
-    }
-    </table>
-</fieldset>
+    </div><!-- /container -->
 
+
+    <a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
+
+    </fieldset>

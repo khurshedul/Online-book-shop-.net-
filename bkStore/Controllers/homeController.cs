@@ -13,12 +13,16 @@ namespace bkStore.Controllers
 
         public ActionResult Index()
         {
-            
+
             using (BookDbContext context = new BookDbContext())
             {
+
                 return View(context.Books.ToList());
+                // return View(data);
+
             }
         }
 
     }
+
 }

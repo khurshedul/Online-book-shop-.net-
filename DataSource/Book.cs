@@ -10,7 +10,8 @@ namespace DataSource
 {
     public class Book
     {   [Key]
-        public int bookId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string bookId { get; set; }
         
         public string bookName { get; set; }
       
@@ -20,7 +21,7 @@ namespace DataSource
         
          public int  quantity{ get; set; }
 
-         public int authorId { get; set; }
+         public string authorId { get; set; }
          [ForeignKey("authorId")]
          public Author Author { get; set; }
 
