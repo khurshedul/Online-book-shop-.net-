@@ -55,8 +55,10 @@
     <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="BookDbContext.cs" />
+    <Compile Include="category.cs" />
     <Compile Include="DbSeeder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -18,12 +18,18 @@ namespace DataSource
         public string publishYear { get; set; }
         
         public double price { get; set; }
-        
+       
          public int  quantity{ get; set; }
 
          public string authorId { get; set; }
          [ForeignKey("authorId")]
-         public Author Author { get; set; }
+
+         public Author authors{ get; set; }
+
+         public string catId { get; set; }
+         [ForeignKey("catId")]
+
+         public category catgories { get; set; }
 
     }
 }
