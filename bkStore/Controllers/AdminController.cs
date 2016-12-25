@@ -18,7 +18,14 @@ namespace bkStore.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+
+            using (BookDbContext context = new BookDbContext())
+            {
+
+                return View(context.categories.ToList());
+                // return View(data);
+
+            }
         }
        [HttpPost]
         public ActionResult Index(HttpPostedFileBase file)
@@ -143,5 +150,50 @@ namespace bkStore.Controllers
             return RedirectToAction("List");
         }
 
+
+         [HttpGet]
+        public ActionResult catList()
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+
+                return View(context.categories.ToList());
+                // return View(data);
+
+            }
+        }
+
+
+         
+        
+       [HttpGet]
+
+        public ActionResult createCat()
+        {
+            return View();
+        }
+
+        [HttpPost]
+
+        public ActionResult createCat(category cat)
+        {
+
+            using (BookDbContext context = new BookDbContext())
+            {
+                if (ModelState.IsValid)
+                {
+                    context.categories.Add(cat);
+                    context.SaveChanges();
+                    return RedirectToAction("index","home");
+                }
+                else
+                {
+                    return View(cat);
+                }
+
+            }
+        }
+            
+        
     }
 }

@@ -1,4 +1,4 @@
-﻿@model DataSource.Book
+﻿@model List<DataSource.category>
 
 @{
     ViewBag.Title = "Index";
@@ -117,7 +117,15 @@
             <button type="submit" class="btn btn-warning" >Submit<span class="glyphicon glyphicon-send"></span></button>
           </div>
         </div>
+            <select name="">
+           @foreach (var item in Model)
+            {
+               
+                   <option value="@Html.DisplayFor(modelItem => item.catId)">@Html.DisplayFor(modelItem => item.catName)</option>
+               
 
+           }
+                </select>
         </fieldset>
         </form>
 </div>

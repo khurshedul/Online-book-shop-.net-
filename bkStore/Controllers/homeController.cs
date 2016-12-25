@@ -36,9 +36,9 @@ namespace bkStore.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(HttpRequest req)
+        public ActionResult Login(NameValueCollection nvclc)
         {
-            NameValueCollection nvclc = Request.Form;
+             nvclc = Request.Form;
             string name =nvclc["uname"];
             string pass = nvclc["pass"];
             using (BookDbContext context = new BookDbContext())
@@ -46,8 +46,13 @@ namespace bkStore.Controllers
                 user user = context.users.SingleOrDefault(d => d.username == name && d.pass==pass);
                 if (user != null)
                 {
-                    return RedirectToAction("index");
-                    
+                    if (user.type == "admin")
+                    {
+                        return RedirectToAction("index","admin");
+                    }
+                    else
+                        return RedirectToAction("index");
+
                 }
                 else
                     return RedirectToAction("Login");
