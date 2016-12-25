@@ -22,6 +22,11 @@ namespace bkStore.Controllers
 
             }
         }
+        public ActionResult cart()
+        {
+            return View();
+            
+        }
 
     }
 

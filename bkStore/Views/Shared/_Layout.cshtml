@@ -8,6 +8,15 @@
         <link href="~/css/mycss.css" rel="stylesheet" />
         <script src="~/javascript/jquery.min.js"></script>
         <script src="~/javascript/bootstrap.min.js"></script>
+                <link href="~/css/image-preview-for-link.css" rel="stylesheet" />
+        <script src="~/javascript/jquery.min.js"></script>
+  <script type="text/javascript">
+      $(function () {
+          $('#p1 a').miniPreview({ prefetch: 'pageload' });
+
+      });
+  </script>
+         <script src="~/javascript/image-preview-for-link.js"></script>
 
             <link href="~/css/bootstrap.min.css" rel="stylesheet" />
             <link href="~/css/style.css" rel="stylesheet" />
@@ -17,7 +26,8 @@
     <body>
         @RenderBody()
 
-  
+
+
             <nav class="navbar navbar-fixed-top navbar-inverse">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -33,14 +43,15 @@
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li id="p1"><a href="~/home/cart">Cnet</a> </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                        </ul>
+                           </ul>
                     </div>
                 </div>
             </nav>
+       
+
 
             @*<div class="container-fluid text-center">
                 <div class="row content">
