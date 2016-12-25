@@ -75,5 +75,73 @@ namespace bkStore.Controllers
             }
         }
 
+
+        [HttpGet]
+        public ActionResult Edit(string id)
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+                Book dept = context.Books.SingleOrDefault(d => d.bookId == id);
+                return View(dept);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Book book)
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+                Book booktoup = context.Books.SingleOrDefault(b => b.bookId == book.bookId);
+                booktoup.bookName = book.bookName;
+                booktoup.authorId = book.authorId;
+                booktoup.price = book.price;
+                booktoup.publishYear = book.publishYear;
+                booktoup.quantity = book.quantity;
+                
+                context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Details(string id)
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+                Book book = context.Books.SingleOrDefault(b => b.bookId == id);
+                return View(book);
+            }
+        }
+
+
+
+        [HttpGet]
+        public ActionResult Delete(string id)
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+                Book book = context.Books.SingleOrDefault(b => b.bookId == id);
+                return View(book);
+            }
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult ConfirmDelete(string id)
+        {
+            string photoName = id + ".jpg";
+            string fullPath = Request.MapPath("~/images/" + photoName);
+            if (System.IO.File.Exists(fullPath))
+            {
+                System.IO.File.Delete(fullPath);
+            }
+            using (BookDbContext context = new BookDbContext())
+            {
+                Book book = context.Books.SingleOrDefault(b => b.bookId == id);
+                context.Books.Remove(book);
+                context.SaveChanges();
+            }
+            return RedirectToAction("List");
+        }
+
     }
 }

@@ -16,3 +16,12 @@ D:\ATP2\bkStore\DataSource\bin\Debug\EntityFramework.SqlServer.xml
 D:\ATP2\bkStore\DataSource\obj\Debug\DataSource.csprojResolveAssemblyReference.cache
 D:\ATP2\bkStore\DataSource\obj\Debug\DataSource.dll
 D:\ATP2\bkStore\DataSource\obj\Debug\DataSource.pdb
+D:\ATP2\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.csprojResolveAssemblyReference.cache
+D:\ATP2\Online-book-shop-.net-\DataSource\bin\Debug\DataSource.dll.config
+D:\ATP2\Online-book-shop-.net-\DataSource\bin\Debug\DataSource.pdb
+D:\ATP2\Online-book-shop-.net-\DataSource\bin\Debug\EntityFramework.dll
+D:\ATP2\Online-book-shop-.net-\DataSource\bin\Debug\EntityFramework.SqlServer.dll
+D:\ATP2\Online-book-shop-.net-\DataSource\bin\Debug\EntityFramework.xml
+D:\ATP2\Online-book-shop-.net-\DataSource\bin\Debug\EntityFramework.SqlServer.xml
+D:\ATP2\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.dll
+D:\ATP2\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.pdb

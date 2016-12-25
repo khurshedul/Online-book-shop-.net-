@@ -21,6 +21,8 @@
     MiniPreview.prototype = {
         sharedCounter: 0,
         defaultOptions: {
+            height: 200,
+            width:200,
             scale: .75,
             prefetch: 'pageload'
         },
