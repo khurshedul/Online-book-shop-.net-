@@ -13,6 +13,7 @@ namespace bkStore.Controllers
     {
         //
         // GET: /Admin/
+     
 
        
         [HttpGet]
@@ -21,7 +22,8 @@ namespace bkStore.Controllers
 
             using (BookDbContext context = new BookDbContext())
             {
-                if (Session["name"] =="admin")
+                string name =Convert.ToString(Session["name"]); 
+                if (name =="admin")
                 {
                     return View(context.categories.ToList());
                    
@@ -246,6 +248,13 @@ namespace bkStore.Controllers
                 }
 
             }
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Remove("name");
+            return Redirect("/home/Login");
+
         }
             
         
