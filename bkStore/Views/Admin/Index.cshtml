@@ -33,19 +33,24 @@
             </div>
           </div>
         </div>
-    @*    
+        
         <div class="form-group"> 
           <label class="col-md-4 control-label">Book Category</label>
             <div class="col-md-4 selectContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <select name="book" class="form-control selectpicker" >
-                  <option value=" " >Book Category</option>
-                  <option>Alabama</option>
-            </select>
+            <select name="Cat">
+           @foreach (var item in Model)
+            {
+               
+                   <option value="@Html.DisplayFor(modelItem => item.catId)">@Html.DisplayFor(modelItem => item.catName)</option>
+               
+
+           }
+                </select>
           </div>
          </div>
-        </div>*@
+        </div>
 
         <!-- Text input-->
 
@@ -54,7 +59,7 @@
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input name="atame" placeholder="Author Name" class="form-control"  type="text">
+          <input name="atname" placeholder="Author Name" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -117,15 +122,7 @@
             <button type="submit" class="btn btn-warning" >Submit<span class="glyphicon glyphicon-send"></span></button>
           </div>
         </div>
-            <select name="">
-           @foreach (var item in Model)
-            {
-               
-                   <option value="@Html.DisplayFor(modelItem => item.catId)">@Html.DisplayFor(modelItem => item.catName)</option>
-               
-
-           }
-                </select>
+          
         </fieldset>
         </form>
 </div>

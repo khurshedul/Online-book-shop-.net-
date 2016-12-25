@@ -17,14 +17,19 @@ namespace bkStore.Controllers
        
         [HttpGet]
         public ActionResult Index()
-        {
+        {  
 
             using (BookDbContext context = new BookDbContext())
             {
+                if (Session["name"] =="admin")
+                {
+                    return View(context.categories.ToList());
+                   
+                }
 
-                return View(context.categories.ToList());
-                // return View(data);
-
+                else
+                    
+                return RedirectToAction("Login", "home");
             }
         }
        [HttpPost]
@@ -56,7 +61,8 @@ namespace bkStore.Controllers
                     Book books = new Book();
                     books.bookId=nvclc["bkid"];
                     books.bookName = nvclc["bkname"];
-                    books.authorId = "1";
+                    books.authorName = nvclc["atname"];
+                    books.catId = nvclc["cat"];
                     books.publishYear = nvclc["pbyear"];
                     books.quantity = Convert.ToInt32(nvclc["quantity"]);
                     books.price = Convert.ToDouble(nvclc["price"]);
@@ -71,13 +77,23 @@ namespace bkStore.Controllers
             // after successfully uploading redirect the user
             return Redirect("index");
         }
+
+        
         public ActionResult List()
         {
             using (BookDbContext context = new BookDbContext())
             {
+                if (Session["name"] == "admin")
+                {
+                    return View(context.Books.ToList());
 
-                return View(context.Books.ToList());
-                // return View(data);
+                }
+
+
+                else
+
+                    return RedirectToAction("Login", "home");
+                
 
             }
         }
@@ -88,8 +104,16 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                Book dept = context.Books.SingleOrDefault(d => d.bookId == id);
-                return View(dept);
+                if (Session["name"] == "admin")
+                {
+
+                    Book dept = context.Books.SingleOrDefault(d => d.bookId == id);
+                    return View(dept);
+                }
+
+                else
+
+                    return RedirectToAction("Login", "home");
             }
         }
 
@@ -100,7 +124,7 @@ namespace bkStore.Controllers
             {
                 Book booktoup = context.Books.SingleOrDefault(b => b.bookId == book.bookId);
                 booktoup.bookName = book.bookName;
-                booktoup.authorId = book.authorId;
+                booktoup.authorName = book.authorName;
                 booktoup.price = book.price;
                 booktoup.publishYear = book.publishYear;
                 booktoup.quantity = book.quantity;
@@ -109,13 +133,21 @@ namespace bkStore.Controllers
             }
             return RedirectToAction("Index");
         }
+
         [HttpGet]
         public ActionResult Details(string id)
         {
             using (BookDbContext context = new BookDbContext())
             {
-                Book book = context.Books.SingleOrDefault(b => b.bookId == id);
-                return View(book);
+                if (Session["name"] == "admin")
+                {
+                    Book book = context.Books.SingleOrDefault(b => b.bookId == id);
+                    return View(book);
+                }
+
+                else
+
+                    return RedirectToAction("Login", "home");
             }
         }
 
@@ -126,8 +158,15 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                Book book = context.Books.SingleOrDefault(b => b.bookId == id);
-                return View(book);
+                if (Session["name"] == "admin")
+                {
+                    Book book = context.Books.SingleOrDefault(b => b.bookId == id);
+                    return View(book);
+                }
+
+                else
+
+                    return RedirectToAction("Login", "home");
             }
         }
 
@@ -156,9 +195,16 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
+                if (Session["name"] == "admin")
+                {
 
-                return View(context.categories.ToList());
-                // return View(data);
+                    return View(context.categories.ToList());
+                    // return View(data);
+                }
+
+                else
+
+                    return RedirectToAction("Login", "home");
 
             }
         }
@@ -170,7 +216,15 @@ namespace bkStore.Controllers
 
         public ActionResult createCat()
         {
-            return View();
+            if (Session["name"] == "admin")
+            {
+
+                return View();
+            }
+
+            else
+
+                return RedirectToAction("Login", "home");
         }
 
         [HttpPost]
@@ -184,7 +238,7 @@ namespace bkStore.Controllers
                 {
                     context.categories.Add(cat);
                     context.SaveChanges();
-                    return RedirectToAction("index","home");
+                    return RedirectToAction("catList","Admin");
                 }
                 else
                 {
