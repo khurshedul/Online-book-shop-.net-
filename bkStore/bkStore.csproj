@@ -41,7 +41,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataSource">
+    <Reference Include="DataSource, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DataSource\bin\Debug\DataSource.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">

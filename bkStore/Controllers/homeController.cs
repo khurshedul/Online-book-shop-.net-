@@ -46,18 +46,23 @@ namespace bkStore.Controllers
                 user user = context.users.SingleOrDefault(d => d.username == name && d.pass==pass);
                 if (user != null)
                 {
+                    Session["name"] = user.username;
                     if (user.type == "admin")
                     {
-                        Session["name"] = user.username;
-                        return RedirectToAction("Index","admin");
+                        
+                        return RedirectToAction("Index", "admin");
                     }
                     else
-                        Session["name"] = user.username;
+                    {
+                      
                         return RedirectToAction("Index", "home");
+                    }
 
                 }
                 else
-                    return RedirectToAction("Login");
+                {
+                  return RedirectToAction("Login");
+                }
             }
             
 

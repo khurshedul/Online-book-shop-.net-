@@ -82,3 +82,35 @@ D:\ATP2\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Razor.xml
 D:\ATP2\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.dll
 D:\ATP2\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.pdb
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\DataSource.pdb
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\bkStore.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\bkStore.pdb
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\DataSource.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\EntityFramework.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\EntityFramework.SqlServer.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\Microsoft.Web.Infrastructure.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\Newtonsoft.Json.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Net.Http.Formatting.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Helpers.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Http.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Http.WebHost.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Mvc.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Razor.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Deployment.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Razor.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\DataSource.pdb
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\EntityFramework.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\EntityFramework.SqlServer.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\Newtonsoft.Json.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Net.Http.Formatting.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Helpers.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Http.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Http.WebHost.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Mvc.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.Razor.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Deployment.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Razor.xml
+F:\project jsp\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.csprojResolveAssemblyReference.cache
+F:\project jsp\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.dll
+F:\project jsp\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.pdb
