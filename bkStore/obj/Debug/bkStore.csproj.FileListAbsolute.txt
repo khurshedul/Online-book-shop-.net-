@@ -56,6 +56,7 @@ D:\ATP2\bkStore\bkStore\obj\Debug\bkStore.csprojResolveAssemblyReference.cache
 D:\ATP2\bkStore\bkStore\obj\Debug\bkStore.dll
 D:\ATP2\bkStore\bkStore\obj\Debug\bkStore.pdb
 D:\ATP2\bkStore\bkStore\bin\DataSource.pdb
+D:\ATP2\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.csprojResolveAssemblyReference.cache
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\bkStore.dll
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\bkStore.pdb
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\DataSource.dll
@@ -69,7 +70,6 @@ D:\ATP2\Online-book-shop-.net-\bkStore\bin\System.Web.Razor.dll
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Deployment.dll
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.dll
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Razor.dll
-D:\ATP2\Online-book-shop-.net-\bkStore\bin\DataSource.pdb
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\EntityFramework.xml
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\EntityFramework.SqlServer.xml
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\Newtonsoft.Json.xml
@@ -79,6 +79,6 @@ D:\ATP2\Online-book-shop-.net-\bkStore\bin\System.Web.Razor.xml
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.xml
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Deployment.xml
 D:\ATP2\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Razor.xml
-D:\ATP2\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.csprojResolveAssemblyReference.cache
 D:\ATP2\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.dll
 D:\ATP2\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.pdb
+D:\ATP2\Online-book-shop-.net-\bkStore\bin\DataSource.pdb

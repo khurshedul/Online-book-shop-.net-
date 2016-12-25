@@ -31,26 +31,23 @@
                     <div class="caption cntr">
                         <p><b>Book:</b>@Html.DisplayFor(modelItem => item.bookName)</p>
                         <p><b>Price:</b>@Html.DisplayFor(modelItem => item.price)</p>
-                        <p> <b>Author:</b>
-                                       @{
-         using (DataSource.BookDbContext context = new DataSource.BookDbContext())
-            {
-                ViewBag.dta= (from a in context.Authors
-                            where a.authorId == item.authorId
-                            select a.authorName).SingleOrDefault();
-                         }
-              
-                         }
+                        <p> <b>Author:</b>@Html.DisplayFor(modelItem => item.authorName)</p>
+                        
+         
             @ViewBag.dta
+                        
 
-                           </p>
+                           
                         <h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
                      
                         <br class="clr">
                     </div>
-                </div>
-            </li>
+                </li>
+               
+                
+           
             }
+                 
 
         </ul>
 

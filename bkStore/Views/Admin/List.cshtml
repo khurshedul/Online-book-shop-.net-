@@ -24,9 +24,7 @@
         <th>
             @Html.DisplayNameFor(model => model.quantity)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.authorId)
-        </th>
+       
         <th></th>
     </tr>
 
@@ -44,9 +42,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.quantity)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.authorId)
-        </td>
+      
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.bookId }) |
             @Html.ActionLink("Details", "Details", new { id=item.bookId }) |

@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="BookDbContext.cs" />
     <Compile Include="category.cs" />

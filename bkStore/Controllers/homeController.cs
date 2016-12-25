@@ -48,10 +48,12 @@ namespace bkStore.Controllers
                 {
                     if (user.type == "admin")
                     {
-                        return RedirectToAction("index","admin");
+                        Session["name"] = user.username;
+                        return RedirectToAction("Index","admin");
                     }
                     else
-                        return RedirectToAction("index");
+                        Session["name"] = user.username;
+                        return RedirectToAction("Index", "home");
 
                 }
                 else

@@ -21,10 +21,10 @@ namespace DataSource
        
          public int  quantity{ get; set; }
 
-         public string authorId { get; set; }
-         [ForeignKey("authorId")]
+         public string authorName { get; set; }
+        
 
-         public Author authors{ get; set; }
+      
 
          public string catId { get; set; }
          [ForeignKey("catId")]
