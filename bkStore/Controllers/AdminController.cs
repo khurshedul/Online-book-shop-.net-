@@ -13,6 +13,7 @@ namespace bkStore.Controllers
     {
         //
         // GET: /Admin/
+     
 
        
         [HttpGet]
@@ -21,9 +22,8 @@ namespace bkStore.Controllers
 
             using (BookDbContext context = new BookDbContext())
             {
-                string name = Convert.ToString(Session["name"]);
+                string name =Convert.ToString(Session["name"]); 
                 if (name =="admin")
-                    
                 {
                     return View(context.categories.ToList());
                    
@@ -85,9 +85,7 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                string name = Convert.ToString(Session["name"]);
-                if (name == "admin")
-                    
+                if (Session["name"] == "admin")
                 {
                     return View(context.Books.ToList());
 
@@ -108,9 +106,7 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                string name = Convert.ToString(Session["name"]);
-                if (name == "admin")
-                    
+                if (Session["name"] == "admin")
                 {
 
                     Book dept = context.Books.SingleOrDefault(d => d.bookId == id);
@@ -145,9 +141,7 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                string name = Convert.ToString(Session["name"]);
-                if (name == "admin")
-                    
+                if (Session["name"] == "admin")
                 {
                     Book book = context.Books.SingleOrDefault(b => b.bookId == id);
                     return View(book);
@@ -166,9 +160,7 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                string name = Convert.ToString(Session["name"]);
-                if (name == "admin")
-                    
+                if (Session["name"] == "admin")
                 {
                     Book book = context.Books.SingleOrDefault(b => b.bookId == id);
                     return View(book);
@@ -205,9 +197,7 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                string name = Convert.ToString(Session["name"]);
-                if (name == "admin")
-                    
+                if (Session["name"] == "admin")
                 {
 
                     return View(context.categories.ToList());
@@ -228,9 +218,7 @@ namespace bkStore.Controllers
 
         public ActionResult createCat()
         {
-            string name = Convert.ToString(Session["name"]);
-            if (name == "admin")
-                    
+            if (Session["name"] == "admin")
             {
 
                 return View();
@@ -260,6 +248,13 @@ namespace bkStore.Controllers
                 }
 
             }
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Remove("name");
+            return Redirect("/home/Login");
+
         }
             
         

@@ -34,3 +34,4 @@ F:\project jsp\Online-book-shop-.net-\DataSource\bin\Debug\EntityFramework.SqlSe
 F:\project jsp\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.csprojResolveAssemblyReference.cache
 F:\project jsp\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.dll
 F:\project jsp\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.pdb
+F:\project jsp\Online-book-shop-.net-\DataSource\bin\Debug\DataSource.dll
