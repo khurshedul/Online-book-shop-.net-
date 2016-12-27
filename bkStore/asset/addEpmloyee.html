@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>
+</title>
+
+</head>
+<body>
+
+
+    <!-- Main content -->
+
+<!-- Main content -->
+  
+
+
+                    <form  class="well form-horizontal" action="" method="post" enctype="multipart/form-data" id="contact_form" onsubmit="return Validate(this);">
+                        <!-- Text input-->
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Name</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input  name="name" value="" class="form-control"  type="text" id="Name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" class="form-control" id="user_id" value="" name="user_id" >
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Gender</label>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="gender" value="male" required /> Male
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="gender" value="female" required /> Female
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Date of Birth</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    <input name="date" name="date"placeholder="date" class="form-control"  type="date" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Mobile Number</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                    <input name="phone" placeholder="Mobile Number" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Nationl ID</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input name="national" placeholder="National Id" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Present Address</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    <input name="paddress" placeholder="Preseent Address" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Permanent Address</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    <input name="peraddress" placeholder="Permanent Address" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Text input-->
+
+                        <!-- Select Basic -->
+
+                        <!-- Text input-->
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">District</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    <select class="form-control select2 cascading" name="district" id="district">
+                                        <option value="0" selected="selected">-Select- </option>
+
+
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Upazila</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    <select class="form-control select2 cascading" name="upazila" id="upazila">
+                                        <option value="0" selected="selected">-Select- </option>
+
+
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Text input-->
+
+                        <!-- radio checks -->
+
+                        <!-- Text area -->
+
+                   
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Upload Profile Picture </label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group cust_file">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input name="image" placeholder="profile picture" class="form-control" type="file" onchange="ValidateSingleInput(this);" required>
+                                </div>
+                            </div>
+                        </div>
+
+                     
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label"></label>
+                            <div class="col-md-4">
+                                <button type="submit"value="Submit" id="submit" class="btn btn-warning"  >Save <span class="glyphicon glyphicon-send"></span></button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- /.row -->
+              </div>
+              <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+      
+      </div>
+
+      <!-- /.end first row -->
+    </section>
+      <!-- /.content -->
+
+
+
+</div>
+
+</body>
+</html>

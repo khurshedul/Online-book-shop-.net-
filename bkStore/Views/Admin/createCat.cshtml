@@ -10,7 +10,7 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
-    <fieldset>
+   <fieldset style="margin-left: 500px">
         <legend>category</legend>
             <div class="editor-label">
             @Html.LabelFor(model => model.catId)
@@ -34,6 +34,6 @@
     </fieldset>
 }
 
-<div>
+<div style="margin-left: 500px">
     @Html.ActionLink("Back to List", "Index")
 </div>

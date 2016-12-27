@@ -7,23 +7,27 @@
 
 <h2>catList</h2>
 
-<p>
+<p style="margin-left: 500px">
     @Html.ActionLink("Create New", "createCat")
 </p>
-<table>
+<table style="margin-left: 500px" border="1">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.catName)
+           <span style="margin-left:20px">Category Name</span>
         </th>
-        <th></th>
+        <th>
+            <span style="margin-left:40px">Action</span>
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+
         <td>
             @Html.DisplayFor(modelItem => item.catName)
         </td>
         <td>
+
             @Html.ActionLink("Edit", "Edit", new { id=item.catId }) |
             @Html.ActionLink("Details", "Details", new { id=item.catId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.catId })

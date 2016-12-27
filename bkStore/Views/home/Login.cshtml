@@ -4,25 +4,106 @@
 }
 
 <h2>Login</h2>
-<form method="post">
-<table>
-    
-    <tr>
-        <td>User id</td>
-         <td><input name="uname" /></td>
-    </tr>
-       <tr>
-        <td>passwod</td>
-         <td><input name="pass" /></td>
-    </tr>
-        <tr>
-            <td>
+<style>
+    .error 
+    {
+        border:1px solid red;
+            
+    }
+    .success 
+    {
+        border:1px solid green;
 
-            </td>
-            <td>
-                <input type="submit" value="login"/>
-            </td>
-        </tr>
-    
-</table>
-    </form>
+    }
+</style>
+
+
+
+
+<script>
+    function myfunc() {
+        var uname = document.getElementById('uname').value;
+        var pass = document.getElementById('pass').value;
+        var msg = "";
+        if (uname == "") {
+            msg+="please fill userName\n";
+            uname.className = "error";
+        }
+        if (pass == "") {
+            msg+="please fill password\n";
+            pass.className = "error";
+        }
+        if (msg == "") {
+            return true;
+        }
+        else {
+            alert(msg);
+            return false;
+        }
+    }
+
+    function validation() {
+        var uname = document.getElementById('uname').value;
+        var pass = document.getElementById('pass').value;
+
+        if (uname != "") {
+            document.getElementById('uname').className = "success";
+        }
+        if (pass != "") {
+            document.getElementById('pass').className = "success";
+        }
+    }
+
+</script>
+
+   
+
+<div class="login-box">
+  <div class="login-logo">Online Book Store</div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Sign in to start your session</p>
+      <form method="post" onsubmit="return myfunc()">
+          
+
+          <div class="form-group has-feedback">
+              <input type="text" id="uname" name="uname" class="form-control" placeholder="UserName"  onkeypress="validation()">
+                
+          </div>
+          <div class="form-group has-feedback">
+              <input type="password" id="pass" name="pass" class="form-control" placeholder="Password" onkeypress="validation()">
+                 
+          </div>
+          <div class="row">
+              <div class="col-xs-8">
+              </div>
+              <!-- /.col -->
+              <div class="col-xs-4">
+                  <button type="submit" name="submit" value="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
+              </div>
+              <!-- /.col -->
+          </div>
+      </form>
+  </div>
+</div>
+
+
+
+    <script src="~/asset/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="~/asset/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="~/asset/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>
+
+
+
+

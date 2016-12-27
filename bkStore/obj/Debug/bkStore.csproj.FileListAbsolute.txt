@@ -114,3 +114,35 @@ F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Razor.xml
 F:\project jsp\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.csprojResolveAssemblyReference.cache
 F:\project jsp\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.dll
 F:\project jsp\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.pdb
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\bkStore.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\bkStore.pdb
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\DataSource.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\EntityFramework.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\EntityFramework.SqlServer.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\Newtonsoft.Json.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Net.Http.Formatting.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Helpers.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Http.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Http.WebHost.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Mvc.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Razor.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\DataSource.pdb
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\EntityFramework.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\EntityFramework.SqlServer.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\Newtonsoft.Json.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Net.Http.Formatting.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Helpers.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Http.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Http.WebHost.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Mvc.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.Razor.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.csprojResolveAssemblyReference.cache
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.pdb
