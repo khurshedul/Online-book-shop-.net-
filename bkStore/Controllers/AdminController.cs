@@ -85,7 +85,8 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                if (Session["name"] == "admin")
+                string name = Convert.ToString(Session["name"]);
+                if (name == "admin")
                 {
                     return View(context.Books.ToList());
 
@@ -106,7 +107,8 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                if (Session["name"] == "admin")
+                string name = Convert.ToString(Session["name"]);
+                if (name == "admin")
                 {
 
                     Book dept = context.Books.SingleOrDefault(d => d.bookId == id);
@@ -141,7 +143,8 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                if (Session["name"] == "admin")
+                string name = Convert.ToString(Session["name"]);
+                if (name == "admin")
                 {
                     Book book = context.Books.SingleOrDefault(b => b.bookId == id);
                     return View(book);
@@ -160,7 +163,8 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                if (Session["name"] == "admin")
+                string name = Convert.ToString(Session["name"]);
+                if (name == "admin")
                 {
                     Book book = context.Books.SingleOrDefault(b => b.bookId == id);
                     return View(book);
@@ -197,7 +201,8 @@ namespace bkStore.Controllers
         {
             using (BookDbContext context = new BookDbContext())
             {
-                if (Session["name"] == "admin")
+                string name = Convert.ToString(Session["name"]);
+                if (name == "admin")
                 {
 
                     return View(context.categories.ToList());
@@ -218,7 +223,8 @@ namespace bkStore.Controllers
 
         public ActionResult createCat()
         {
-            if (Session["name"] == "admin")
+            string name = Convert.ToString(Session["name"]);
+            if (name == "admin")
             {
 
                 return View();
