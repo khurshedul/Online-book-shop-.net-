@@ -13,6 +13,7 @@ namespace DataSource
         protected override void Seed(BookDbContext context)
         {
             base.Seed(context);
+
           user users= new user()
             {
                

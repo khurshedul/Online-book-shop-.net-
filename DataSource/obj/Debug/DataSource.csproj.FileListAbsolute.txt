@@ -35,3 +35,12 @@ F:\project jsp\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.csprojReso
 F:\project jsp\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.dll
 F:\project jsp\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.pdb
 F:\project jsp\Online-book-shop-.net-\DataSource\bin\Debug\DataSource.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\DataSource\bin\Debug\DataSource.dll.config
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\DataSource\bin\Debug\DataSource.pdb
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\DataSource\bin\Debug\EntityFramework.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\DataSource\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\DataSource\bin\Debug\EntityFramework.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\DataSource\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.csprojResolveAssemblyReference.cache
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.dll
+C:\Users\Safayet\Documents\Visual Studio 2012\Projects\Online-book-shop-.net-\DataSource\obj\Debug\DataSource.pdb
