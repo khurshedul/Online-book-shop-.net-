@@ -114,3 +114,29 @@ F:\project jsp\Online-book-shop-.net-\bkStore\bin\System.Web.WebPages.Razor.xml
 F:\project jsp\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.csprojResolveAssemblyReference.cache
 F:\project jsp\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.dll
 F:\project jsp\Online-book-shop-.net-\bkStore\obj\Debug\bkStore.pdb
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\bkStore.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\bkStore.pdb
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\DataSource.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\EntityFramework.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\EntityFramework.SqlServer.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\Newtonsoft.Json.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.Helpers.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.Mvc.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.Razor.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.WebPages.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\DataSource.pdb
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\EntityFramework.xml
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\EntityFramework.SqlServer.xml
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\Newtonsoft.Json.xml
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.Helpers.xml
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.Mvc.xml
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.Razor.xml
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.WebPages.xml
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\obj\Debug\bkStore.csprojResolveAssemblyReference.cache
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\obj\Debug\bkStore.dll
+C:\Users\sumon\Desktop\github\Online-Book-Shop\bkStore\obj\Debug\bkStore.pdb

@@ -28,27 +28,27 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Logo</a>
+                        <img src="~/images/ClickHandler.ashx.jpg" style="height:50px; width:200px"/>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Add Book</a></li>
+                            <li class="active"><a href="/Admin/Index">Add Book</a></li>
                             <li><a href="/Admin/List">Books List</a></li>
                             <li><a href="/Admin/catList">Book Category</a></li>
-                            <li><a href="#">FeedBack</a></li>
-                             <li><a href="#">Sells Report</a></li>
-                             <li style="padding-top:1.5%">
-                                <form class="form-search" method="get" id="s" action="/">
+                           
+                             <li><a href="/Admin/report">Sells Report</a></li>
+                             @*<li style="padding-top:1.5%">
+                                <form class="form-search" method="get" id="s" action="Search">
                                     <div class="input-append">
                                         <input type="text" class="input-medium search-query" name="s" placeholder="Search" value="">
                                         <button type="submit" class="add-on"><i class="icon-search"></i></button>
                                     </div>
                                 </form>
-                            </li>
+                            </li>*@
 
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/Admin/Logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                            <li><a href="/Admin/Logout"> Logout</a></li>
                         </ul>
                     </div>
                 </div>

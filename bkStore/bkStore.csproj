@@ -135,6 +135,7 @@
     <Content Include="css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="images\88.jpg" />
+    <Content Include="images\ClickHandler.ashx.jpg" />
     <Content Include="javascript\bootstrap.min.js" />
     <Content Include="javascript\image-preview-for-link.js" />
     <Content Include="javascript\jquery.min.js" />
@@ -170,9 +171,6 @@
     <Content Include="Views\Admin\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\home\cart.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Admin\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +193,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Admin\FileUpload.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_UserLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\home\userIndex.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\home\cart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\home\checkout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\report.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\cEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\catDelete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\catDetails.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

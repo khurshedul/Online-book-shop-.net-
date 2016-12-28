@@ -1,24 +1,19 @@
 ﻿@model DataSource.category
 
 @{
-    ViewBag.Title = "createCat";
+    ViewBag.Title = "cEdit";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>createCat</h2>
+<h2>cEdit</h2>
 <center>
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>category</legend>
-            <div class="editor-label">
-            @Html.LabelFor(model => model.catId)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.catId)
-            @Html.ValidationMessageFor(model => model.catId)
-        </div>
+  
+        <h3>category</h3>
+
+        @Html.HiddenFor(model => model.catId)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.catName)
@@ -29,9 +24,9 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Save" />
         </p>
-    </fieldset>
+  
 }
 
 <div>

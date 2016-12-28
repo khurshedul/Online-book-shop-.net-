@@ -1,0 +1,27 @@
+﻿@model DataSource.category
+
+@{
+    ViewBag.Title = "catDelete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>catDelete</h2>
+<center>
+<h3>Are you sure you want to delete this?</h3>
+
+    <h2>category</h2>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.catName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.catName)
+    </div>
+
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "catList")
+    </p>
+}
+    </center>

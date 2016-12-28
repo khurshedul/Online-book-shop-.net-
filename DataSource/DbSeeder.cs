@@ -27,9 +27,28 @@ namespace DataSource
                 
             };
 
+          checkout check = new checkout()
+          {
+              bookId="1",
+              bookName="Harano Dinguli",
+               authorName="Mr Niloy",
+               categoryName="1",
+               price=200,
+               quantity=3,
+               userId="1"
+              
+             
+
+
+
+
+
+          };
+
 
 
           context.users.Add(users);
+          context.checkouts.Add(check);
       
 
               context.SaveChanges();

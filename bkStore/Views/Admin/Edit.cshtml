@@ -6,12 +6,11 @@
 }
 
 <h2>Edit</h2>
-
+<div class="container" style="margin-left:520px">
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Book</legend>
+        <p>Edit this Book</p>
 
         @Html.HiddenFor(model => model.bookId)
 
@@ -51,9 +50,9 @@
         <p>
             <input type="submit" value="Save" />
         </p>
-    </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "List")
 </div>
+    </div>

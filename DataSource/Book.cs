@@ -12,14 +12,14 @@ namespace DataSource
     {   [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string bookId { get; set; }
-        
+     
         public string bookName { get; set; }
       
         public string publishYear { get; set; }
         
         public double price { get; set; }
        
-         public int  quantity{ get; set; }
+        public int  quantity{ get; set; }
 
          public string authorName { get; set; }
         

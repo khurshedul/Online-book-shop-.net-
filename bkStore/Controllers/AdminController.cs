@@ -77,7 +77,7 @@ namespace bkStore.Controllers
 
             }
             // after successfully uploading redirect the user
-            return Redirect("index");
+            return RedirectToAction("List","Admin");
         }
 
         
@@ -97,6 +97,44 @@ namespace bkStore.Controllers
 
                     return RedirectToAction("Login", "home");
                 
+
+            }
+        }
+
+        [HttpPost]
+        public ActionResult List(NameValueCollection nvclc)
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+                string name = Convert.ToString(Session["name"]);
+                if (name == "admin")
+                {
+
+                    
+                        nvclc = Request.Form;
+                        string search = nvclc["search"];
+                        if (search != "")
+                        {
+
+                            Book dept = context.Books.SingleOrDefault(d => d.bookName.StartsWith(search));
+                            if (dept != null)
+                            {
+                                ViewBag.vs += "<tr>" + "</td>" + "<td>" + dept.bookName + "</td>" + "<td>" + dept.bookId + "</td>" + "<td>" + dept.authorName + "</td>" + "<td>" + dept.price + "</td>" + "<td>" + dept.publishYear + "</td><td>" + dept.quantity + "</td>" + "</tr>";
+                                return View(context.Books.ToList());
+                            }
+
+                            return View(context.Books.ToList());
+                        }
+
+                        return View(context.Books.ToList());
+
+                }
+
+
+                else
+
+                    return RedirectToAction("Login", "home");
+
 
             }
         }
@@ -135,7 +173,7 @@ namespace bkStore.Controllers
                 
                 context.SaveChanges();
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("List","Admin");
         }
 
         [HttpGet]
@@ -155,8 +193,41 @@ namespace bkStore.Controllers
                     return RedirectToAction("Login", "home");
             }
         }
+        [HttpGet]
+        public ActionResult report()
+        {
 
+            using (BookDbContext context = new BookDbContext())
+            {
+               var x= (from r in context.checkouts select r.quantity);
+               if (x != null)
+               {
+                   int p = x.Sum();
+                   ViewBag.bag = p;
+                   return View(context.categories.ToList());
+               }
+               else
+               return View(context.categories.ToList());
+            }
+        }
+        [HttpPost]
+        public ActionResult report(NameValueCollection nvclc)
+        {
+            nvclc = Request.Form;
+            string cat = nvclc["cat"];
+            using (BookDbContext context = new BookDbContext())
+            {
+                var x = (from r in context.checkouts select r.quantity);
+                int p = x.Sum();
+                ViewBag.bag = p;
 
+                var dataset2 = (from recordset in context.checkouts where recordset.categoryName == cat select recordset.quantity);
+                int p1 = dataset2.Sum();
+                ViewBag.cat = p1;
+                return View(context.categories.ToList());
+            }
+
+        }
 
         [HttpGet]
         public ActionResult Delete(string id)
@@ -256,9 +327,103 @@ namespace bkStore.Controllers
             }
         }
 
+
+        [HttpGet]
+        public ActionResult cEdit(string id)
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+                string catName = Convert.ToString((Session["name"]));
+                if (catName == "admin")
+                {
+                    category cat = context.categories.SingleOrDefault(c => c.catId == id);
+                    return View(cat);
+                }
+                else
+
+                    return RedirectToAction("Login", "home");
+
+            }
+        }
+
+
+        [HttpPost]
+        public ActionResult cEdit(category category)
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+                category cat = context.categories.SingleOrDefault(b => b.catId == category.catId);
+                cat.catName = category.catName;
+
+                context.SaveChanges();
+            }
+            return RedirectToAction("catList", "Admin");
+        }
+
+
+        [HttpGet]
+        public ActionResult catDetails(string id)
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+                string catname = Convert.ToString(Session["name"]);
+                if (catname == "admin")
+                {
+                    category cat = context.categories.SingleOrDefault(c => c.catId == id);
+                    return View(cat);
+                }
+
+                else
+
+                    return RedirectToAction("Login", "home");
+            }
+        }
+
+        [HttpGet]
+
+        public ActionResult catDelete(string id)
+        {
+            using (BookDbContext context = new BookDbContext())
+            {
+                string catname = Convert.ToString(Session["name"]);
+                if (catname == "admin")
+                {
+                    category cat = context.categories.SingleOrDefault(c => c.catId == id);
+                    return View(cat);
+                }
+
+                else
+
+                    return RedirectToAction("Login", "home");
+            }
+        }
+
+        [HttpPost]
+        [ActionName("catDelete")]
+        public ActionResult confirmDelete(string id)
+        {
+
+
+            using (BookDbContext context = new BookDbContext())
+            {
+                category cat = context.categories.SingleOrDefault(c => c.catId == id);
+                context.categories.Remove(cat);
+                context.SaveChanges();
+            }
+            return RedirectToAction("catList");
+        }
+
+
+
+
+
+
+
         public ActionResult Logout()
         {
             Session.Remove("name");
+            
+
             return Redirect("/home/Login");
 
         }

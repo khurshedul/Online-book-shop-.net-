@@ -14,6 +14,8 @@ namespace DataSource
             
             public DbSet<user> users { get; set; }
             public DbSet<category> categories { get; set; }
+            public DbSet<cart> carts { get; set; }
+            public DbSet<checkout> checkouts { get; set; }
         }
     
 }

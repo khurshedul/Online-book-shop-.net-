@@ -7,10 +7,31 @@
 
 <h2>List</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
+<table border="1">
+    <tr>
+        <th>book name</th>
+        <th>Book iD</th>
+        <th>Author name</th>
+        <th>Price</th>
+        <th>Publish year</th>
+        <th>Quantity</th>
+    </tr>
+@if(ViewBag.vs!=null)
+{foreach(var item in ViewBag.vs)
+{
+@Html.Raw(item)
+}
+}
+    </table>
+
+
+<form method="post">
+    <input type="text" name="search" />
+    <input type="submit"  value="search" />
+
+    
+<table style="margin-left:500px" border="2">
+
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.bookName)
@@ -25,7 +46,9 @@
             @Html.DisplayNameFor(model => model.quantity)
         </th>
        
-        <th></th>
+        <th>
+            Action
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -51,4 +74,23 @@
     </tr>
 }
 
+
 </table>
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     }

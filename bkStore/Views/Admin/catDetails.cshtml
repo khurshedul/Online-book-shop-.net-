@@ -1,0 +1,24 @@
+﻿@model DataSource.category
+
+@{
+    ViewBag.Title = "catDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>catDetails</h2>
+
+<center>
+    <legend>category</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.catName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.catName)
+    </div>
+
+<p>
+    @Html.ActionLink("Edit", "cEdit", new { id=Model.catId }) |
+    @Html.ActionLink("Back to List", "catList")
+</p>
+    </center>

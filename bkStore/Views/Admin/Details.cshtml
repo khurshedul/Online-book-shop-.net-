@@ -7,8 +7,8 @@
 
 <h2>Details</h2>
 
-<fieldset>
-    <legend>Book</legend>
+<div style="margin-left:520px">
+    <p>Book</p>
 
     <div class="display-label">
          @Html.DisplayNameFor(model => model.bookName)
@@ -38,9 +38,10 @@
         @Html.DisplayFor(model => model.quantity)
     </div>
 
-   
-</fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.bookId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "List")
 </p>
+    
+   
+</div>
