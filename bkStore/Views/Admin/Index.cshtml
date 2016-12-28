@@ -1,0 +1,230 @@
+﻿@model List<DataSource.category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .error 
+    {
+        border:1px solid red;
+            
+    }
+    .success 
+    {
+        border:1px solid green;
+
+    }
+</style>
+
+
+
+
+<script>
+    function myfunc() {
+        var bkid = document.getElementById('bkid').value;
+        var bkname = document.getElementById('bkname').value;
+        var atname = document.getElementById('atname').value;
+        var pbyear = document.getElementById('pbyear').value;
+        var price = document.getElementById('price').value;
+        var quantity = document.getElementById('quantity').value;
+        var file = document.getElementById('file').value;
+
+        var msg = "";
+        if (bkid == "") {
+            msg+="please fill Book ID\n";
+            bkid.className = "error";
+        }
+        if (bkname == "") {
+            msg+="please fill Book Name\n";
+            bkname.className = "error";
+        }
+        if (atname == "") {
+            msg += "please fill Author Name\n";
+            atname.className = "error";
+        }
+        if (pbyear == "") {
+            msg += "please fill Publication Year\n";
+            pbyear.className = "error";
+        }
+
+        if (price == "") {
+            msg += "please fill Book Price\n";
+            price.className = "error";
+        }
+        if (quantity == "") {
+            msg += "please fill Book Quantity\n";
+            quantity.className = "error";
+        }
+        if (file == "") {
+            msg += "please fill Book Image\n";
+            file.className = "error";
+        }
+
+
+        if (msg == "") {
+            return true;
+        }
+        else {
+            alert(msg);
+            return false;
+        }
+    }
+
+    function validation() {
+        var bkid = document.getElementById('bkid').value;
+        var bkname = document.getElementById('bkname').value;
+        var atname = document.getElementById('atname').value;
+        var pbyear = document.getElementById('pbyear').value;
+        var price = document.getElementById('price').value;
+        var quantity = document.getElementById('quantity').value;
+        var file = document.getElementById('file').value;
+
+        if (bkid != "") {
+            document.getElementById('uname').className = "success";
+        }
+        if (bkname != "") {
+            document.getElementById('pass').className = "success";
+        }
+        if (atname != "") {
+            document.getElementById('atname').className = "success";
+        }
+        if (pbyear != "") {
+            document.getElementById('pbyear').className = "success";
+        }
+        if (price != "") {
+            document.getElementById('price').className = "success";
+        }
+        if (quantity != "") {
+            document.getElementById('quantity').className = "success";
+        }
+        if (file != "") {
+            document.getElementById('file').className = "success";
+        }
+    }
+
+</script>
+
+
+
+
+
+<div class="container" style="padding-top:5.5%">
+           <form class="well form-horizontal" enctype="multipart/form-data" method="post"  id="contact_form"  onsubmit="return myfunc()">
+        <div style="margin-left:150px">
+
+        <!-- Form Name -->
+        @*<legend>Add Book</legend>*@
+
+            <b>Add Book</b>
+            <hr>
+        <div class="form-group">
+          <label class="col-md-4 control-label">Book Id</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+          
+          <input  name="bkid" id="bkid" placeholder="Book Id" class="form-control"  type="text" onkeypress="validation()">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Book Name</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+          
+          <input  name="bkname" id="bkname" placeholder="Book Name" class="form-control"  type="text" onkeypress="validation()">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group"> 
+          <label class="col-md-4 control-label">Book Category</label>
+            <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                
+            <select name="Cat">
+           @foreach (var item in Model)
+            {
+               
+                   <option value="@Html.DisplayFor(modelItem => item.catId)">@Html.DisplayFor(modelItem => item.catName)</option>
+               
+
+           }
+                </select>
+          </div>
+         </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" >Author Name</label> 
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+          
+          <input name="atname" id="atname" placeholder="Author Name" class="form-control"  type="text" onkeypress="validation()">
+            </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+               <div class="form-group">
+          <label class="col-md-4 control-label">Publish Year</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+               
+          <input name="pbyear" id="pbyear"  class="form-control"  type="date" onkeypress="validation()" placeholder="DD-MM-YYYY">
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Text input-->
+       
+        <div class="form-group">
+          <label class="col-md-4 control-label">Price</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+          <input name="price" id="price" placeholder="" class="form-control" type="number" onkeypress="validation()">
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label">Quantity</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+          <input name="quantity" id="quantity" placeholder="" class="form-control" type="number" onkeypress="validation()">
+            </div>
+          </div>
+        </div>
+        
+
+          <div class="form-group">
+                                    <label class="col-md-4 control-label">Upload Book Picture </label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group cust_file">
+                                            
+                                            <input name="file" id="file" class="form-control" type="file" onchange="ValidateSingleInput(this);" onkeypress="validation()">
+                                        </div>
+                                    </div>
+                                </div>
+                                                     
+
+        <!-- Success message -->
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-4">
+            <button type="submit" class="btn btn-warning" >Submit</button>
+          </div>
+        </div>
+          
+        </div>
+        </form>
+</div>

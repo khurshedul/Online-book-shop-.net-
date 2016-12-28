@@ -1,0 +1,78 @@
+﻿@model IEnumerable<DataSource.cart>
+
+
+@{
+    ViewBag.Title = "userIndex";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h2>cart</h2>
+
+
+
+    <div style="margin-left:10%">
+    <div class="row">
+        
+        <div class="col-md-1">
+           User Id
+        </div>
+        <div class="col-md-1">
+           Book Id
+        </div>
+          <div class="col-md-2">
+            Book Name
+        </div>
+      
+        <div class="col-md-1">
+           Price
+        </div>
+        <div class="col-md-1">
+           Author
+        </div>
+        <div class="col-md-1">
+            Quantity
+        </div>
+        <div></div>
+    </div>
+
+@foreach (var item in Model) {
+    <form method="post" name="@Html.DisplayFor(modelItem => item.bookId)">
+    <div class="row">
+        <div class="col-md-1">
+            @Html.DisplayFor(modelItem => item.userId)
+        </div>
+        <div class="col-md-1">
+            @Html.DisplayFor(modelItem => item.bookId)
+        </div>
+          <div class="col-md-2">
+            @Html.DisplayFor(modelItem => item.bookName)
+        </div>
+        
+        <div class="col-md-1">
+            @Html.DisplayFor(modelItem => item.price)
+        </div>
+        <div class="col-md-1">
+            @Html.DisplayFor(modelItem => item.authorName)
+        </div>
+         <div class="col-md-1">
+           <input type="text" value="1" style="width: 50px" name="quantity" />
+        </div>
+        <div class="col-md-6">
+             <input type="submit" name="@Html.DisplayFor(modelItem => item.bookId)" value="Confirm Buy" />
+           
+            @Html.ActionLink("Remove", "Removeiteam", new { id=item.cartId })
+        </div>
+    </div>
+    <input type="hidden" name="userId" value="@Html.DisplayFor(modelItem => item.userId)" />
+     <input type="hidden" name="bookId" value="@Html.DisplayFor(modelItem => item.bookId)" />
+      <input type="hidden" name="bookName" value="@Html.DisplayFor(modelItem => item.bookName)" />
+     <input type="hidden" name="categoryName" value="@Html.DisplayFor(modelItem => item.categoryName)" />
+     <input type="hidden" name="price" value="@Html.DisplayFor(modelItem => item.price)" />
+     <input type="hidden" name="authorName" value="@Html.DisplayFor(modelItem => item.authorName)" />
+ 
+</form>
+}
+</div>
+    
+      
+

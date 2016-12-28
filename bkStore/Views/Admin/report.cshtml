@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DataSource.category>
+
+@{
+    ViewBag.Title = "report";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>report</h2>
+<center>
+<div >
+<h1>Total Sold Books :</h1><h1>@ViewBag.bag</h1>
+
+
+<form method="post">
+<h4>Category Name</h4><select name="cat">
+@foreach (var item in Model) {
+   
+          <option value="@Html.DisplayFor(modelItem => item.catId)"> @Html.DisplayFor(modelItem => item.catName)</option> 
+    
+}
+</select>
+    <input type="submit" value="category wise Report" />
+    </form>
+@if (ViewBag.cat == null)
+{ 
+<h1>no data available</h1>
+}
+else{
+<h1>catagory Wise Total sell: @ViewBag.cat</h1>
+}
+    </div>
+    </center>

@@ -1,0 +1,58 @@
+﻿@model DataSource.Book
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit</h2>
+<div class="container" style="margin-left:520px">
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+        <p>Edit this Book</p>
+
+        @Html.HiddenFor(model => model.bookId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.bookName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bookName)
+            @Html.ValidationMessageFor(model => model.bookName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.publishYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.publishYear)
+            @Html.ValidationMessageFor(model => model.publishYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.price)
+            @Html.ValidationMessageFor(model => model.price)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.quantity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.quantity)
+            @Html.ValidationMessageFor(model => model.quantity)
+        </div>
+
+     
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>
+    </div>

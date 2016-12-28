@@ -1,0 +1,96 @@
+﻿@model IEnumerable<DataSource.Book>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>List</h2>
+
+<table border="1">
+    <tr>
+        <th>book name</th>
+        <th>Book iD</th>
+        <th>Author name</th>
+        <th>Price</th>
+        <th>Publish year</th>
+        <th>Quantity</th>
+    </tr>
+@if(ViewBag.vs!=null)
+{foreach(var item in ViewBag.vs)
+{
+@Html.Raw(item)
+}
+}
+    </table>
+
+
+<form method="post">
+    <input type="text" name="search" />
+    <input type="submit"  value="search" />
+
+    
+<table style="margin-left:500px" border="2">
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.bookName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publishYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+       
+        <th>
+            Action
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bookName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.publishYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantity)
+        </td>
+      
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.bookId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.bookId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.bookId })
+        </td>
+    </tr>
+}
+
+
+</table>
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     }

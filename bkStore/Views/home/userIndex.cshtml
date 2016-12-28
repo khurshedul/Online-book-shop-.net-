@@ -1,0 +1,79 @@
+﻿@model IEnumerable<DataSource.Book>
+
+@{
+    ViewBag.Title = "userIndex";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<fieldset>
+
+    <legend></legend>
+    <div class="container" style="padding-top:5%">
+        <div id="gototop"> </div>
+
+
+        <h3>Click to buy this products </h3>
+         <div class="thumbnails">
+
+            @foreach (var item in Model)
+            {
+                <form method="post">
+                   
+            <div class="span3">
+                <div class="thumbnail">
+                    
+           
+             @Html.Raw("<img src=/"+"images"+"/"+item.bookId+".jpg>")
+                    <div class="caption cntr">
+                        <p><b>Book:</b>@Html.DisplayFor(modelItem => item.bookName)</p>
+                        <p><b>Price:</b>@Html.DisplayFor(modelItem => item.price)</p>
+                        <p> <b>Author:</b>@Html.DisplayFor(modelItem => item.authorName)</p>
+                        <input type="hidden" name="bid" value="@Html.DisplayFor(modelItem => item.bookId)" />
+                        <input type="hidden" name="bname"value="@Html.DisplayFor(modelItem => item.bookName)" />
+                        <input type="hidden" name="aname" value="@Html.DisplayFor(modelItem => item.authorName)" />
+                        <input type="hidden" name="price" value="@Html.DisplayFor(modelItem => item.price)" />
+                         <input type="hidden" name="category" value="@Html.DisplayFor(modelItem => item.catId)" />
+                         <input type="hidden" name="publishYear" value="@Html.DisplayFor(modelItem => item.publishYear)" />
+
+                        
+         
+
+                        
+
+                           
+                        <h4><input type="submit" name="@Html.DisplayFor(modelItem => item.bookName)" value="Add to cart" class="shopBtn"  title="add to cart"></h4>
+                     
+                        <br class="clr">
+                    </div>
+                  
+                  </div>     
+                </div>
+              
+               </form>
+           
+            }
+             </div>    
+
+        
+
+
+    </div><!-- /container -->
+
+
+    <a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
+
+    </fieldset>
+
+@if(ViewBag.Message != null)
+{
+<script>
+
+$(document).ready(function(){
+
+alert('@ViewBag.Message');
+
+});
+
+</script>
+
+}

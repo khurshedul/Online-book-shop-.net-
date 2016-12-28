@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+<style>
+    .error 
+    {
+        border:1px solid red;
+            
+    }
+    .success 
+    {
+        border:1px solid green;
+
+    }
+</style>
+
+
+
+
+<script>
+    function myfunc() {
+        var uname = document.getElementById('uname').value;
+        var pass = document.getElementById('pass').value;
+        var msg = "";
+        if (uname == "") {
+            msg+="please fill userName\n";
+            uname.className = "error";
+        }
+        if (pass == "") {
+            msg+="please fill password\n";
+            pass.className = "error";
+        }
+        if (msg == "") {
+            return true;
+        }
+        else {
+            alert(msg);
+            return false;
+        }
+    }
+
+    function validation() {
+        var uname = document.getElementById('uname').value;
+        var pass = document.getElementById('pass').value;
+
+        if (uname != "") {
+            document.getElementById('uname').className = "success";
+        }
+        if (pass != "") {
+            document.getElementById('pass').className = "success";
+        }
+    }
+
+</script>
+
+   
+<form method="post" onsubmit="return  myfunc()">
+    <div class="container">
+<table style="margin-left:490px;margin-top:200px">
+    
+    <tr>
+        <td>User id</td>
+         <td><input name="uname" id="uname" type="text" onkeypress="validation()" /></td>
+    </tr>
+       <tr>
+        <td>passwod</td>
+         <td><input type="Password" id="pass" name="pass"  onkeypress="validation()"  /></td>
+    </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <input type="submit" value="login"/>
+            </td>
+        </tr>
+    </div>
+</table>
+    </form>

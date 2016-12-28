@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DataSource.category>
+
+@{
+    ViewBag.Title = "catList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>catList</h2>
+
+<p style="margin-left:500px">
+    @Html.ActionLink("Create New", "createCat")
+</p>
+<table style="margin-left:500px" border="2">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.catName)
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.catName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "cEdit", new { id=item.catId }) |
+            @Html.ActionLink("Details", "catDetails", new { id=item.catId }) |
+            @Html.ActionLink("Delete", "catDelete", new { id=item.catId })
+        </td>
+    </tr>
+}
+
+</table>

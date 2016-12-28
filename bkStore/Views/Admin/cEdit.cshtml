@@ -1,0 +1,35 @@
+﻿@model DataSource.category
+
+@{
+    ViewBag.Title = "cEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>cEdit</h2>
+<center>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+  
+        <h3>category</h3>
+
+        @Html.HiddenFor(model => model.catId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.catName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.catName)
+            @Html.ValidationMessageFor(model => model.catName)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+  
+}
+
+<div>
+    @Html.ActionLink("Back to List", "catList")
+</div>
+    </center>
