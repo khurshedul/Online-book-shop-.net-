@@ -196,6 +196,8 @@ namespace bkStore.Controllers
         [HttpGet]
         public ActionResult report()
         {
+            string name = Convert.ToString(Session["name"]);
+            if (name == "admin")
 
             using (BookDbContext context = new BookDbContext())
             {
@@ -209,6 +211,7 @@ namespace bkStore.Controllers
                else
                return View(context.categories.ToList());
             }
+            return RedirectToAction("login","home");
         }
         [HttpPost]
         public ActionResult report(NameValueCollection nvclc)
