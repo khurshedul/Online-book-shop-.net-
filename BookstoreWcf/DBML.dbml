@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bookShop" Class="DBMLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-MNCSP62\SQLEXPRESS;Initial Catalog=bookShop;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="bookShopConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Books" Member="Books">
+    <Type Name="Book">
+      <Column Name="bookId" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="bookName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="publishYear" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="authorName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="catId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="category_Book" Member="category" ThisKey="catId" OtherKey="catId" Type="category" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.carts" Member="carts">
+    <Type Name="cart">
+      <Column Name="cartId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="bookId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="bookName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="categoryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="authorName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.categories" Member="categories">
+    <Type Name="category">
+      <Column Name="catId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="catName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="category_Book" Member="Books" ThisKey="catId" OtherKey="catId" Type="Book" />
+    </Type>
+  </Table>
+  <Table Name="dbo.checkouts" Member="checkouts">
+    <Type Name="checkout">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bookId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="bookName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="userId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="categoryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="authorName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="user">
+      <Column Name="username" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="pass" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

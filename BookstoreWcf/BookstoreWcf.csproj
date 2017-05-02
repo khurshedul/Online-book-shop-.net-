@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,21 +67,35 @@
     <Compile Include="BKStoreWcf.svc.cs">
       <DependentUpon>BKStoreWcf.svc</DependentUpon>
     </Compile>
+    <Compile Include="BLL\BookBLL.cs" />
+    <Compile Include="DBML.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBML.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\BooKEntity.cs" />
     <Compile Include="IBkStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="BLL\" />
-    <Folder Include="DLL\" />
-    <Folder Include="Entity\" />
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DBML.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBML.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBML.dbml.layout">
+      <DependentUpon>DBML.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

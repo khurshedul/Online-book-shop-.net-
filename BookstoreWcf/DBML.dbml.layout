@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBML">
+  <DataContextMoniker Name="/DBMLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cde1f4ea-9348-45fa-a66f-84dd780d5fdf" absoluteBounds="5.875, 1.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBMLDataContext/Book" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d62e1d6c-5cb4-4662-9c1f-31bafe9543ec" absoluteBounds="5.89, 1.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78f38527-64e2-4622-b418-35cf86fa6b07" absoluteBounds="3.5, 2.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBMLDataContext/cart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="663d6709-98af-4fb7-812a-4328d72b1608" absoluteBounds="3.5149999999999997, 2.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c0a1404-2be1-4a65-b365-a7ff1b5e903d" absoluteBounds="3.375, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DBMLDataContext/category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a102f7f-5e8f-4084-a81e-52a43b5927d2" absoluteBounds="3.3899999999999997, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 1.40949625651042); (5.875 : 1.40949625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBMLDataContext/category/category_Book" />
+      <nodes>
+        <classShapeMoniker Id="5c0a1404-2be1-4a65-b365-a7ff1b5e903d" />
+        <classShapeMoniker Id="cde1f4ea-9348-45fa-a66f-84dd780d5fdf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d76bd001-ad25-4a93-b574-1bc69ca10a0b" absoluteBounds="8.125, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DBMLDataContext/checkout" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f2e8ed2-76c0-43d1-9720-01ed04fcdd3a" absoluteBounds="8.14, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85c901a8-2170-4c4f-b49a-1e9e1a5d9e37" absoluteBounds="1.25, 1, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBMLDataContext/user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b15d2b5f-9a1e-49ab-88c1-139076e2bb7b" absoluteBounds="1.2650000000000001, 1.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

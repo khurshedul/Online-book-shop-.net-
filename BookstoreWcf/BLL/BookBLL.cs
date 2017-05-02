@@ -5,6 +5,7 @@ using System.Web;
 
 namespace BookstoreWcf.BLL
 {
+    
     public class BookBLL
     {
     }
