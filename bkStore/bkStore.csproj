@@ -137,14 +137,23 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\image-preview-for-link.css" />
+    <Content Include="css\kendo.common.min.css" />
+    <Content Include="css\kendo.default.min.css" />
+    <Content Include="css\kendo.default.mobile.min.css" />
+    <Content Include="css\kendo.rtl.min.css" />
     <Content Include="css\mycss.css" />
     <Content Include="css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="images\88.jpg" />
-    <Content Include="javascript\bootstrap.min.js" />
-    <Content Include="javascript\image-preview-for-link.js" />
-    <Content Include="javascript\jquery.min.js" />
-    <Content Include="Service References\ServiceReference\bkStore.ServiceReference.CompositeType.datasource">
+    <Content Include="css\javascript\bootstrap.min.js" />
+    <Content Include="css\javascript\image-preview-for-link.js" />
+    <Content Include="css\javascript\jquery.min.js" />
+    <Content Include="css\javascript\kendo.all.min.js" />
+    <Content Include="css\kendo.common.min.css.map" />
+    <Content Include="css\kendo.default.min.css.map" />
+    <Content Include="css\kendo.default.mobile.min.css.map" />
+    <Content Include="css\kendo.rtl.min.css.map" />
+    <Content Include="Service References\ServiceReference\bkStore.ServiceReference.BookEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\ServiceReference\TestWcf.disco" />
@@ -154,7 +163,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -162,7 +173,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <None Include="Service References\ServiceReference\TestWcf2.xsd">
+    <None Include="Service References\ServiceReference\TestWcf3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -227,6 +238,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReference\TestWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\TestWcf2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
