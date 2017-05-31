@@ -4,7 +4,109 @@
     ViewBag.Title = "catList";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<script type="text/javascript" >
+    $(document).ready(function () {
+        LoadAdvocacyPartnerListInKendoGrid
+    });
+    function LoadAdvocacyPartnerListInKendoGrid() {
 
+        $("#divAdvocacyPartnerList").kendoGrid({
+            dataSource: {
+                transport: {
+                    read: {
+                        url: "GetCategoryList?",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    data: "d.",
+                    total: "d.length",
+                    model: {
+                        id: "catId"
+                    }
+                },
+                pageSize: 10
+
+            },
+
+            height: 581,
+            reorderable: true,
+            //dataBinding: onDataBinding,
+            resizable: true,
+            filterable: true,
+            columnMenu: true,
+            sortable: true,
+            scrollable: {
+                virtual: true
+            },
+            selectable: "multiple cell",
+            allowCopy: true,
+            pageable: {
+                refresh: true,
+                numeric: false,
+                previousNext: false
+            },
+
+
+            columns: [
+
+                 {
+                     template: "#if(AP_FIRST_NAME!='') {#<div onclick='ShowClientDetailsSlider(this);' style='cursor: pointer;'> <div class='customer-photo'" +
+                                     "style='background-image: url(../images/bds-decased.png);background-size: 20px;background-repeat: no-repeat;'></div>" +
+                                 "<div class='customer-name'>#: AP_FIRST_NAME # #: AP_LAST_NAME #</div></div> #}#",
+                     field: "AP_FIRST_NAME",
+                     title: "Name",
+                     width: 350
+                 },
+
+                   {
+                       field: "AP_ID",
+                       title: "ID",
+                       width: 90
+                   },
+                    {
+                        field: "AP_STATUS",
+                        title: "Status"
+                    },
+                   {
+                       field: "MOST_RECENT_RISK_CLASSIFICATION",
+                       title: "Risk",
+                       width: 100
+                   },
+
+                  {
+                      field: "AP_BIRTH_DATE",
+                      title: "DOB",
+                      template: "#if(AP_BIRTH_DATE==null) {# #}else {# #=kendo.toString(kendo.parseDate(AP_BIRTH_DATE, 'yyyy-MM-dd'), 'dd/MM/yyyy')# #}#"
+                  },
+
+                    {
+                        field: "AP_ID",
+                        title: " ",
+                        template: "#if(AP_ID != null) {# <a class='btn btn-primary grid-btn' id-index='2' click-mode='manage' onclick='ClientCurrentSelectedIdClick(this,  #=AP_ID#);'>Manage</a> <a class='btn btn-grey grid-btn' id-index='2' click-mode='edit' onclick='ClientCurrentSelectedIdClick(this,  #=AP_ID#);'>Edit</a> <a class='btn btn-grey-border grid-btn' id-index='2' click-mode='delete' onclick='ClientCurrentSelectedIdClick(this,  #=AP_ID#);'>Delete</a>#}#"
+                    }
+
+
+            ],
+            change: function (e) {
+
+
+                //var clientSelect = this.select();
+                //var selectedItem = this.dataItem(clientSelect);
+
+                //$("[id*= hdneditfieldId]").val(selectedItem.CLIENT_ID);
+                //$("[id*= hdnClientFName]").val(selectedItem.CLIENT_FIRSTNAME);
+                //$("[id*= hdnClientLName]").val(selectedItem.CLIENT_LASTNAME);
+                //$("[id*=hdnBrdCrumbClientID]").val(selectedItem.CLIENT_ID);
+                //$("[id*=hdnClientName]").val(selectedItem.CLIENT_FIRSTNAME);
+
+            },
+
+            selectable: true
+
+        });
+    }
+</script>
 <h2>catList</h2>
 
 <p style="margin-left:500px">
