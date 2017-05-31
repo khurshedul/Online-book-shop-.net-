@@ -9,6 +9,7 @@ namespace bkStore.Controllers
 {
     public class homeController : Controller
     {
+        
         //
         // GET: /home/
         [HttpGet]
@@ -18,8 +19,11 @@ namespace bkStore.Controllers
             using (BookDbContext context = new BookDbContext())
             {
 
-                return View(context.Books.ToList());
+               // return View(context.Books.ToList());
                 // return View(data);
+                ServiceReference.TestWcfClient client = null;
+                //return View(context.Books.ToList());
+                return View(client.GetuserTypeDetails());
 
             }
         }
@@ -28,9 +32,11 @@ namespace bkStore.Controllers
         [HttpPost]
         public ActionResult Index(NameValueCollection nvclc)
         {
+            
 
             using (BookDbContext context = new BookDbContext())
             {
+               
                 string name = Convert.ToString(Session["name"]);
                 if (name == "")
                 {
@@ -40,7 +46,9 @@ namespace bkStore.Controllers
 
                 else
                 {
-                        return View(context.Books.ToList());
+                    ServiceReference.TestWcfClient client=null;
+                        //return View(context.Books.ToList());
+                    return View(client.GetuserTypeDetails());
                         
                 }
             }

@@ -100,6 +100,15 @@ namespace bkStore.Controllers
 
             }
         }
+        [HttpGet ]
+        public JsonResult GetCategoryList()
+        {
+             using (BookDbContext context = new BookDbContext())
+             {
+                 return Json  ( context .categories .ToList ());
+             }
+             
+        }
 
         [HttpPost]
         public ActionResult List(NameValueCollection nvclc)
