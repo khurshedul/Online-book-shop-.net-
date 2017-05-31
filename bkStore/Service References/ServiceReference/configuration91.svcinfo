@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="1NH+SF1QyzkP6Rk2UjCoa3DCVlw=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Fm+DN0FccPPDI+NwXkRFxwDtsVc=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ITestWcf">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ITestWcf" contract="ServiceReference.ITestWcf" bindingType="basicHttpBinding" address="http://localhost:61330/TestWcf.svc" bindingConfiguration="BasicHttpBinding_ITestWcf">
+    <endpoint name="BasicHttpBinding_ITestWcf" contract="ServiceReference.ITestWcf" bindingType="basicHttpBinding" address="http://localhost:61330/TestWcf.svc/testWcf" bindingConfiguration="BasicHttpBinding_ITestWcf">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:61330/TestWcf.svc</serializedValue>
+          <serializedValue>http://localhost:61330/TestWcf.svc/testWcf</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

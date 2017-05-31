@@ -15,18 +15,15 @@ namespace bkStore.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/testWcf")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BookEntity", Namespace="http://schemas.datacontract.org/2004/07/")]
     [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BookEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
+        private bkStore.ServiceReference.user[] userlistField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -39,27 +36,171 @@ namespace bkStore.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
+        public bkStore.ServiceReference.user[] userlist {
             get {
-                return this.BoolValueField;
+                return this.userlistField;
             }
             set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
+                if ((object.ReferenceEquals(this.userlistField, value) != true)) {
+                    this.userlistField = value;
+                    this.RaisePropertyChanged("userlist");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="user", Namespace="http://schemas.datacontract.org/2004/07/testWcf")]
+    [System.SerializableAttribute()]
+    public partial class user : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string addressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string emailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string passField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string phoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string typeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string usernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address {
+            get {
+                return this.addressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.addressField, value) != true)) {
+                    this.addressField = value;
+                    this.RaisePropertyChanged("address");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
+        public string email {
             get {
-                return this.StringValueField;
+                return this.emailField;
             }
             set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
+                if ((object.ReferenceEquals(this.emailField, value) != true)) {
+                    this.emailField = value;
+                    this.RaisePropertyChanged("email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pass {
+            get {
+                return this.passField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.passField, value) != true)) {
+                    this.passField = value;
+                    this.RaisePropertyChanged("pass");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.phoneField, value) != true)) {
+                    this.phoneField = value;
+                    this.RaisePropertyChanged("phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.typeField, value) != true)) {
+                    this.typeField = value;
+                    this.RaisePropertyChanged("type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string username {
+            get {
+                return this.usernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.usernameField, value) != true)) {
+                    this.usernameField = value;
+                    this.RaisePropertyChanged("username");
                 }
             }
         }
@@ -78,17 +219,11 @@ namespace bkStore.ServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.ITestWcf")]
     public interface ITestWcf {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestWcf/GetData", ReplyAction="http://tempuri.org/ITestWcf/GetDataResponse")]
-        string GetData(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestWcf/GetuserTypeDetails", ReplyAction="http://tempuri.org/ITestWcf/GetuserTypeDetailsResponse")]
+        bkStore.ServiceReference.BookEntity GetuserTypeDetails();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestWcf/GetData", ReplyAction="http://tempuri.org/ITestWcf/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestWcf/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ITestWcf/GetDataUsingDataContractResponse")]
-        bkStore.ServiceReference.CompositeType GetDataUsingDataContract(bkStore.ServiceReference.CompositeType composite);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestWcf/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ITestWcf/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<bkStore.ServiceReference.CompositeType> GetDataUsingDataContractAsync(bkStore.ServiceReference.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestWcf/GetuserTypeDetails", ReplyAction="http://tempuri.org/ITestWcf/GetuserTypeDetailsResponse")]
+        System.Threading.Tasks.Task<bkStore.ServiceReference.BookEntity> GetuserTypeDetailsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -118,20 +253,12 @@ namespace bkStore.ServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public bkStore.ServiceReference.BookEntity GetuserTypeDetails() {
+            return base.Channel.GetuserTypeDetails();
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
-        }
-        
-        public bkStore.ServiceReference.CompositeType GetDataUsingDataContract(bkStore.ServiceReference.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
-        }
-        
-        public System.Threading.Tasks.Task<bkStore.ServiceReference.CompositeType> GetDataUsingDataContractAsync(bkStore.ServiceReference.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
+        public System.Threading.Tasks.Task<bkStore.ServiceReference.BookEntity> GetuserTypeDetailsAsync() {
+            return base.Channel.GetuserTypeDetailsAsync();
         }
     }
 }

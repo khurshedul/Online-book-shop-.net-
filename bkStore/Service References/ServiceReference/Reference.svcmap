@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ebfceeaf-0b76-4973-95cd-584295521827" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="82610148-aebb-4f14-ba25-153a3fc4b7be" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:61330/TestWcf.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TestWcf.xsd" MetadataType="Schema" ID="4dd30808-86a0-4abe-b917-791dc2837aaa" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?xsd=xsd0" />
-    <MetadataFile FileName="TestWcf1.xsd" MetadataType="Schema" ID="2a55e85e-75c4-4beb-b404-7a839606fbae" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="e2ba9ca7-12b4-44ea-9c03-7a80829019cc" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?wsdl" />
-    <MetadataFile FileName="TestWcf.disco" MetadataType="Disco" ID="190ed2a1-cadf-464a-8d94-d4833994d8db" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?disco" />
-    <MetadataFile FileName="TestWcf2.xsd" MetadataType="Schema" ID="251d8b6a-dddb-47b8-aac5-39d106b5b13b" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="TestWcf.xsd" MetadataType="Schema" ID="7401440a-669d-4f50-8fe1-12519e13c907" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="TestWcf1.xsd" MetadataType="Schema" ID="918c4f66-820a-43d3-8d01-d097340dc267" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="TestWcf2.xsd" MetadataType="Schema" ID="da0a65cd-8b60-4c71-8f5d-d9b68b3315d9" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="1a5ff16c-26c3-42da-91f6-bfdde203f986" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?wsdl" />
+    <MetadataFile FileName="TestWcf.disco" MetadataType="Disco" ID="b385e03c-ec6b-4be3-af55-bce675320099" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?disco" />
+    <MetadataFile FileName="TestWcf3.xsd" MetadataType="Schema" ID="d3526868-59d9-424c-9e82-1472cbfbca8c" SourceId="1" SourceUrl="http://localhost:61330/TestWcf.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

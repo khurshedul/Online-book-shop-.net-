@@ -4,44 +4,26 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:61330/TestWcf.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:61330/TestWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:61330/TestWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/testWcf" />
+      <xsd:import schemaLocation="http://localhost:61330/TestWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost:61330/TestWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/testWcf" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ITestWcf_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="ITestWcf_GetuserTypeDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetuserTypeDetails" />
   </wsdl:message>
-  <wsdl:message name="ITestWcf_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
-  </wsdl:message>
-  <wsdl:message name="ITestWcf_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
-  </wsdl:message>
-  <wsdl:message name="ITestWcf_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="ITestWcf_GetuserTypeDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetuserTypeDetailsResponse" />
   </wsdl:message>
   <wsdl:portType name="ITestWcf">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITestWcf/GetData" message="tns:ITestWcf_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITestWcf/GetDataResponse" message="tns:ITestWcf_GetData_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITestWcf/GetDataUsingDataContract" message="tns:ITestWcf_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITestWcf/GetDataUsingDataContractResponse" message="tns:ITestWcf_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="GetuserTypeDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestWcf/GetuserTypeDetails" message="tns:ITestWcf_GetuserTypeDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestWcf/GetuserTypeDetailsResponse" message="tns:ITestWcf_GetuserTypeDetails_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITestWcf" type="tns:ITestWcf">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/ITestWcf/GetData" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/ITestWcf/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="GetuserTypeDetails">
+      <soap:operation soapAction="http://tempuri.org/ITestWcf/GetuserTypeDetails" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -52,7 +34,7 @@
   </wsdl:binding>
   <wsdl:service name="Service1">
     <wsdl:port name="BasicHttpBinding_ITestWcf" binding="tns:BasicHttpBinding_ITestWcf">
-      <soap:address location="http://localhost:61330/TestWcf.svc" />
+      <soap:address location="http://localhost:61330/TestWcf.svc/testWcf" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
